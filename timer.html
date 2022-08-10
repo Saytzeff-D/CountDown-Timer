@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Countdown Timer</title>
+	<link rel="stylesheet" type="text/css" href="timer.css">
+</head>
+<body>
+<center> 
+    <div id="topic">                  
+	<marquee><h1>Countdown Timer</h1></marquee> 
+	<!-- <marquee direction="up" loop="9999" scrolldelay="10s"></marquee> -->
+	<div id="result"></div>
+</div>
+	<div id="total">
+	<div id="time">
+	<input type="number" id="hour" name="">
+	<span id="symbol">:</span>
+	<input type="number" id="min" name="">
+	<span id="symbol">:</span>
+	<input type="number" id="sec" name="">
+   </div>
+
+	<div id="mean">
+		<h1>HOURS</h1>
+		<h1>MINUTES</h1>
+		<h1>SECONDS</h1>
+	</div>
+	<button id="res" onclick="clearMe()">PAUSE</button>
+	<button id="res" onclick="stopMe()">STOP</button>
+	<button id="res" onclick="clickMe()">START</button>
+</div>
+</center>
+	<script type="text/javascript">
+		var song = new Audio('audio/hail.mp3');
+		var myVar;
+		var check = true;
+		function clickMe() {
+			myVar = setInterval(desa,1000);	
+		}
+		function desa() {
+			if (check) {
+			var seconds = sec.value;
+			seconds--;
+			sec.value = seconds;
+			var minute = min.value;
+			var hourr = hour.value;
+
+			if (seconds < 0) {
+				sec.value += '0';
+			}
+			if (seconds < 0) {
+				sec.value = 59;
+				minute--;
+				min.value = minute;
+				if (minute < '0') {
+					min.value += '0';
+				}
+			}
+			
+					
+			if (minute < 0) {
+				
+				min.value =59;
+				hour.value = hourr;
+				if (hourr >= '0') {
+					hour.value--;
+				}
+		
+			}
+			                                                                                                                                                                
+   			if (hour.value == min.value == sec.value && min.sec == sec.value == hour.value && sec.value == hour.value == min.value) {
+   				result.innerHTML = song.play();
+   				check = false;
+   			}
+		} else {
+			clearInterval(myVar);
+		}
+
+
+		}
+
+		function stopMe() {
+			song.stop();
+		}
+		function clearMe() {
+			clearInterval(myVar);
+		}
+		
+	</script>
+</body>
+</html>

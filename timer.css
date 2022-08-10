@@ -1,0 +1,41 @@
+#topic{
+	max-width: 200px;
+	height: 20px;
+	font-family: cursive;
+}
+#total{
+	max-width: 40%;
+	height: 250px;
+	background-color: red;
+	
+}
+#time{
+	display: flex;
+	justify-content: space-around;
+	font-family: arial;
+}
+#hour,#min,#sec{
+	height: 70%;
+	max-width: 30%;
+	background-color: yellow;
+	font-size: 40px;
+	margin-top: 50px;
+	border: none;
+}
+#symbol{
+	font-size: 60px;
+	color: black;
+	margin-top: 30px;
+}
+#mean{
+	display: flex;
+	justify-content: space-around;
+	font-family: candara;
+}
+#res{
+	background-color: orange;
+	height: 30px;
+	max-width: 80px;
+	border: none;
+	font-family: cursive;
+}
